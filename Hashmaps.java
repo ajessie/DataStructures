@@ -3,18 +3,20 @@ import java.util.*;
 
 public class Hashmaps {
 	public static void main(String[] args) {
-		HashMap<String, String> phonebook = new HashMap<String, String>();
-		phonebook.put("Andrew", "5555");
-		phonebook.put("John", "4567");
-		phonebook.put("Alice", "9999");
-		
-		
-		
-		System.out.println("Size of the hashmap is " + phonebook.size());
-		for (@SuppressWarnings("rawtypes") Map.Entry contact: phonebook.entrySet()) {
-			System.out.println(contact.getKey() + " " + contact.getValue());
+		HashMap<String, Integer> phonebook = new HashMap<>();
+		phonebook.put("Andrew",   445);
+		phonebook.put("John"  ,   306);
+		phonebook.put("Alice" ,   206);
+	    Scanner myObj = new Scanner(System.in);  						// Create a Scanner object
+	    System.out.println("Enter Contact Name");						// Get user input
+	    String userName = myObj.nextLine();      						// Read user input
+	    
+		if (phonebook.containsKey(userName)) {
+			Integer a = phonebook.get(userName);
+			System.out.println(userName + "'s number is:" + " " + a);
+		    myObj.close();												// Close scanner
+		} else {
+			System.out.println("Not Found");
 		}
-		String key = "John";
-		System.out.println("John's number is " + phonebook.get(key)); 
 	}
 }
