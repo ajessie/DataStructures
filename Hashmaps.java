@@ -14,7 +14,7 @@ public class Hashmaps {
 		if (phonebook.containsKey(userName)) {
 			Integer a = phonebook.get(userName);
 			System.out.println(userName + "'s number is:" + " " + a);
-		    myObj.close();												// Close scanner
+		    myObj.close();								// Close scanner
 		} else {
 			System.out.println("Not Found");
 		}
